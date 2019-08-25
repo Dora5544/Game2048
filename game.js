@@ -421,6 +421,7 @@ function UI() {
         let yDown=0;
         //绑定手指触碰启动
         gameTable.addEventListener("touchstart",function(e){
+            e.preventDefault();
             //保存起始位置
             xDown=e.touches[0].screenX;
             yDown=e.touches[0].screenY;
@@ -434,6 +435,7 @@ function UI() {
          * @since 2019.8.21
          */
         gameTable.addEventListener("touchend",function(e){
+            e.preventDefault();
             //保存移动后位置
             let xUp=e.changedTouches[0].screenX;
             let yUp=e.changedTouches[0].screenY;
